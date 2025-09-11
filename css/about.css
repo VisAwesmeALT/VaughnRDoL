@@ -1,0 +1,156 @@
+/* About page specific styles */
+.about-page {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 100%;
+}
+
+/* Fun fact section */
+.fun-fact {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.fun-fact h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.fun-fact p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* Section headers */
+section h2 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.2rem;
+    color: #fff;
+}
+
+/* Hobbies section */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hobbies > h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 0.5rem;
+}
+
+.hobby-card {
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hobby-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    flex-shrink: 0;
+}
+
+.hobby-card .content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.hobby-card h3 {
+    margin: 0 0 1rem 0;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.hobby-card p {
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Goals section */
+.goals {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+}
+
+.goals h2 {
+    margin-top: 0;
+}
+
+.goals h3 {
+    color: #fff;
+    margin: 1.5rem 0 1rem 0;
+    font-size: 1.5rem;
+}
+
+.goals ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals li {
+    color: #f0f0f0;
+    margin: 0.8rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.goals li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #fff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .about-page {
+        padding: 1rem;
+    }
+    
+    .fun-fact {
+        padding: 1.5rem;
+    }
+    
+    .fun-fact h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hobbies {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .hobby-card img {
+        height: 180px;
+    }
+}

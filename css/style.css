@@ -1,0 +1,263 @@
+/* Reset and basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+body { 
+        color: #fff;
+        background: linear-gradient(270deg, #0f2027, #203a43, #2c5364);
+        background-size: 600% 600%;
+    animation: gradientShift 15s ease infinite;
+    min-height: 100vh;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 80vh;
+    padding: 2rem;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 400;
+}
+
+.welcome-card {
+    background: rgba(0,0,0,0.4);
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+/* Nav */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(0,0,0,0.5);
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+
+/* Generic container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Academics page */
+.academics-page h1,
+.academics-page h2 {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.academics-page .grades,
+.academics-page .assessments {
+    background: rgba(0,0,0,0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 1.5rem 0 2rem 0;
+}
+
+.fade-slide {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlide 1s forwards;
+}
+
+.fade-slide.delay {
+    animation-delay: 0.5s;
+}
+
+.fade-slide.delay-2 {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInSlide {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.academics-page table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: rgba(0,0,0,0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.academics-page th, .academics-page td {
+    padding: 0.8rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.academics-page th {
+    background: rgba(255,255,255,0.1);
+}
+
+.academics-page tbody tr:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Self Assessment page */
+.self-assessment-page h1 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+}
+
+.self-assessment-page > .container > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f0f0f0;
+}
+
+.rating-scale {
+    background: rgba(0,0,0,0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.rating-scale h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.rating-scale p {
+    color: #f0f0f0;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.scale-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.scale-item {
+    background: rgba(255,255,255,0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.scale-item:hover {
+    border-color: #4a9eff;
+    transform: translateY(-3px);
+}
+
+.scale-item .score {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a9eff;
+    margin-bottom: 0.5rem;
+}
+
+.scale-item .label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.scale-item .description {
+    color: #f0f0f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.assessment-section {
+    background: rgba(0,0,0,0.4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+}
+
+.assessment-section h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.assessment-section > p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #f0f0f0;
+}
+
+.assessment-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.assessment-section ul li {
+    margin: 0.8rem 0;
+    padding: 0.8rem;
+    background: rgba(255,255,255,0.05);
+    border-radius: 8px;
+    color: #f0f0f0;
+    border-left: 4px solid #4a9eff;
+}
+
+.assessment-section ul li:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(5px);
+    transition: all 0.3s ease;
+}
